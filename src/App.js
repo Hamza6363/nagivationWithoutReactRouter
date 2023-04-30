@@ -20,8 +20,11 @@ const ServicePage = () =>{
   }
 }
 const ContactPage = () =>{
+  const submittedData = (e) =>{
+    console.log(e);
+  } 
   if(window.location.pathname === "/contact"){
-    return <Contact />
+    return <Contact formSubmitData={submittedData} />
   }
 }
 

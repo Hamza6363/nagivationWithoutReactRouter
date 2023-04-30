@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-export default function Contact() {
+export default function Contact(props) {
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,8 +15,7 @@ export default function Contact() {
       email: email,
       gender: gender
     }
-
-    console.log(data);
+    props.formSubmitData(data);
   }
   return (
     <form onSubmit={submitHandler}>
